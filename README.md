@@ -13,11 +13,11 @@ Akses mudah, cepat, dan fleksibel kapan saja.
 
 Tampilan sederhana dan ramah pengguna.
 
-🎯 Tujuan
+ Tujuan
 
 BorrowMe hadir untuk meningkatkan minat baca dan memberikan akses literasi yang mudah bagi semua orang.
 
-🚀 Cara Menggunakan
+ Cara Menggunakan
 
 Daftar akun atau login ke BorrowMe.
 

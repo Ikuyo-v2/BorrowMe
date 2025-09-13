@@ -1,9 +1,9 @@
-📚 BorrowMe
+ BorrowMe
 
 Selamat datang di BorrowMe!
 BorrowMe adalah perpustakaan online yang menyediakan layanan peminjaman buku gratis dalam bentuk digital.
 
-✨ Fitur Utama
+ Fitur Utama
 
 Koleksi buku digital dari berbagai kategori.
 

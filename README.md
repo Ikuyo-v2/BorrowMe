@@ -1,45 +1,36 @@
- BorrowMe
+BorrowMe
 
-Selamat datang di BorrowMe!
-BorrowMe adalah perpustakaan online yang menyediakan layanan peminjaman buku gratis dalam bentuk digital.
+Selamat datang di BorrowMe, perpustakaan online yang menyediakan layanan peminjaman buku digital gratis untuk semua pengguna.
+BorrowMe hadir untuk memudahkan akses literasi bagi siapa pun, kapan pun, dan di mana pun.
 
- Fitur Utama
+Fitur Utama
 Koleksi buku digital dari berbagai kategori.
 Peminjaman buku gratis tanpa biaya.
-Akses mudah, cepat, dan fleksibel kapan saja.
-Tampilan sederhana dan ramah pengguna.
+Akses mudah dan fleksibel kapan saja.
+Antarmuka sederhana dan ramah pengguna.
 
- Tujuan
-BorrowMe hadir untuk meningkatkan minat baca dan memberikan akses literasi yang mudah bagi semua orang.
-
- Cara Menggunakan
+Tujuan
+BorrowMe bertujuan untuk meningkatkan minat baca dan memberikan kemudahan akses literasi digital bagi semua kalangan.
+Cara Menggunakan
 Daftar akun atau login ke BorrowMe.
-Cari buku yang ingin dipinjam.
-Klik Pinjam untuk membaca secara digital.
-Nikmati bacaanmu kapan saja dan di mana saja!
+Cari buku melalui halaman seperti New Release, Categories, dan lainnya.
+Klik "Pinjam" untuk membaca buku secara digital.
+Tambahkan buku ke Wishlist jika ingin menyimpannya terlebih dahulu.
+Masuk ke halaman Pick Up jika ingin bukumu diantarkan.
 
-Entitas:
+Entitas Utama
 Books
-users
+Users
 Wishlist
 
-Cara Pengunaan:
-User masuk ke home page
-user kemuadian login 
-user memilih buku melalui berbagai fitur seperti page new release, categories, dll
-user mengclick buku yang dinginkan
-user memasukkan buku ke wishlist
-user kemudian ke page pick up untunk bukunya diantarkan
-
-Language & App:
-Html
-Css
-Javascript
+Teknologi yang Digunakan
+HTML
+CSS
+JavaScript
 PHP
 Figma
 
-Dokumentasi pengerjaan:
-Daniel : front end
-arikcs : designer
-David  : designer
-
+Dokumentasi Pengerjaan
+Daniel – Frontend Developer
+Arikcs – Designer
+David – Designer

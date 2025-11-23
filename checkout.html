@@ -1,0 +1,200 @@
+  <!DOCTYPE html>
+  <html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | BorrowMe</title>
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="home.css">
+  </head>
+  <body>
+   <header>
+      <div class="top-bar">
+        <div class="logo-container">
+          <img src="imgs/Logo.png" alt="BorrowMe Logo" class="logo" />
+        </div>
+        <form class="search-form">
+          <input
+            type="text"
+            placeholder="Search: text book, e-books, journals, etc"
+            class="search-input"
+          />
+        </form>
+        <div class="auth-links">
+          <a href="login.php" class="login-link">Login</a>
+          <a href="Register.php" class="account-link">Make an account</a>
+        </div>
+      </div>
+      <nav class="nav-bar">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="Home.html">Home</a></li>
+          <li class="nav-item"><a href="categories.html">Categories</a></li>
+          <li class="nav-item"><a href="#">Pre-Orders</a></li>
+          <li class="nav-item active"><a href="new_release_1.php">New Releases</a></li>
+          <li class="nav-item"><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Checkout Section -->
+    <section class="checkout">
+      <h1>Checkout</h1>
+      <div class="checkout-container">
+        <!-- Left Form -->
+        <div class="form-section">
+          <h3>Metode Pengantaran</h3>
+          <div class="delivery-options">
+            <button class="active">Delivery</button>
+            <button>Pick Up</button>
+          </div>
+
+          <form>
+            <label>Nama Lengkap *</label>
+            <input type="text" placeholder="Masukkan nama lengkap" required>
+
+            <label>Email *</label>
+            <input type="email" placeholder="Masukkan email" required>
+
+            <label>Nomor Telepon *</label>
+            <input type="tel" placeholder="Masukkan nomor telepon" required>
+
+            <label>Alamat Lengkap *</label>
+            <textarea placeholder="Masukkan alamat lengkap" required></textarea>
+          </form>
+        </div>
+
+        <!-- Right Summary -->
+        <div class="summary-section">
+          <h3>Produk :</h3>
+          <div class="product-box">
+            <img src="https://via.placeholder.com/80x100" alt="Warriors">
+            <div class="product-info">
+              <p><b>Warriors</b></p>
+              <p>Natalie & Sara</p>
+              <p>Comic</p>
+            </div>
+            <div class="qty-box">
+              <button id="minusBtn">−</button>
+              <span id="qtyValue">1</span>
+              <button id="plusBtn">+</button>
+            </div>
+          </div>
+
+          <div class="payment-info">
+            <label>Metode Pembayaran :</label>
+            <select id="payment" required>
+              <option value="">-- Pilih Metode Pembayaran --</option>
+              <option value="COD">Cash on Delivery</option>
+              <option value="VA">Virtual Account</option>
+              <option value="Dana">Dana</option>
+              <option value="Gopay">Gopay</option>
+              <option value="Shopeepay">Shopeepay</option>
+              <option value="Transfer">Transfer Bank</option>
+            </select>
+
+            <label>Ongkir :</label>
+            <input type="text" id="ongkir" placeholder="Masukkan ongkir (contoh: 10000)" required>
+
+            <label>Tanggal Pengembalian :</label>
+            <input type="date">
+
+            <label>Total :</label>
+            <input type="text" id="total" readonly placeholder="Total otomatis">
+            <small id="errorMsg" class="error-text"></small>
+          </div>
+
+          <button class="order-btn" id="orderBtn" disabled>Pesan Sekarang</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-left">
+        <h3>BorrowMe</h3>
+        <p>Email : BorrowMe@Libary.com</p>
+        <p>WA : +62 8125786979</p>
+      </div>
+
+      <div class="footer-center">
+        <h4>About us</h4>
+        <p>Aricks Wijaya</p>
+        <p>David Aditya Wijaya</p>
+        <p>Daniel Riady</p>
+      </div>
+
+      <div class="footer-right">
+        <h4>Absen</h4>
+        <p>05</p>
+        <p>12</p>
+        <p>14</p>
+      </div>
+      <p class="copyright">Copyright BorrowMe. All Right Reserved</p>
+    </footer>
+
+    <!-- Script -->
+    <script>
+      const ongkirInput = document.getElementById('ongkir');
+      const totalInput = document.getElementById('total');
+      const qtyValue = document.getElementById('qtyValue');
+      const minusBtn = document.getElementById('minusBtn');
+      const plusBtn = document.getElementById('plusBtn');
+      const errorMsg = document.getElementById('errorMsg');
+      const orderBtn = document.getElementById('orderBtn');
+      const paymentSelect = document.getElementById('payment');
+
+      let qty = 1;
+      let ongkir = 0;
+
+      function formatRupiah(angka) {
+        return "Rp " + angka.toLocaleString("id-ID");
+      }
+
+      function updateTotal() {
+        if (ongkir <= 0) {
+          totalInput.value = "";
+          errorMsg.textContent = "⚠️ Masukkan ongkir terlebih dahulu!";
+          orderBtn.disabled = true;
+          return;
+        }
+
+        errorMsg.textContent = "";
+        const total = (ongkir * 2) * qty;
+        totalInput.value = formatRupiah(total);
+
+        orderBtn.disabled = paymentSelect.value === "";
+      }
+
+      // Tombol tambah/kurang jumlah
+      plusBtn.addEventListener("click", () => {
+        qty++;
+        qtyValue.textContent = qty;
+        updateTotal();
+      });
+
+      minusBtn.addEventListener("click", () => {
+        if (qty > 1) {
+          qty--;
+          qtyValue.textContent = qty;
+          updateTotal();
+        }
+      });
+
+      // Format otomatis saat mengetik ongkir
+      ongkirInput.addEventListener("input", (e) => {
+        let value = e.target.value.replace(/[^\d]/g, "");
+        if (value === "") {
+          ongkir = 0;
+          ongkirInput.value = "";
+          updateTotal();
+          return;
+        }
+        ongkir = parseInt(value); // nilai langsung (tanpa kali 1000)
+        ongkirInput.value = formatRupiah(ongkir);
+        updateTotal();
+      });
+
+      paymentSelect.addEventListener("change", updateTotal);
+    </script>
+  </body>
+  </html>

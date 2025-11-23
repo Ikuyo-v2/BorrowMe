@@ -1,0 +1,210 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8B5E34;
+    color: white;
+    padding: 10px 30px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.user-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-icons input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+
+.checkout {
+    padding: 40px 80px;
+}
+
+.checkout-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.form-section, .summary-section {
+    flex: 1;
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Delivery buttons */
+.delivery-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.delivery-options button {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #eee;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.delivery-options .active {
+    background: #8B5E34;
+    color: white;
+}
+
+/* Form inputs */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    height: 80px;
+}
+
+/* Product summary */
+.summary-section .product-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.product-info p {
+    margin: 3px 0;
+}
+
+/* Quantity box */
+.qty-box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: auto;
+}
+
+.qty-box button {
+    background: #8B5E34;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.qty-box button:hover {
+    background: #6f4623;
+}
+
+.qty-box span {
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* Payment info */
+.payment-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.error-text {
+    color: red;
+    font-size: 13px;
+    margin-top: -5px;
+}
+
+/* Button */
+.order-btn {
+    background: #C0392B;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.order-btn:hover {
+    background: #a83225;
+}
+
+/* Footer */
+.footer {
+    background-color: #8B5E34;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    padding: 10px 20px;
+}
+
+.footer h4 {
+    margin-bottom: 10px;
+}
+
+.footer p {
+    margin: 4px 0;
+}
+
+.copyright {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+.payment-info input[type="text"], 
+.payment-info select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.error-text {
+  color: red;
+  font-size: 12px;
+}

@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #121212;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    display: flex;
+    width: 900px;
+    height: 500px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #111;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.left-panel {
+    background-color: #fff;
+    flex: 1;
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #000;
+    animation: slideInLeft 0.8s ease forwards;
+}
+
+.left-panel h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.left-panel p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form input[type="Text"],
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    background-color: #c4c4c4;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #000;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.options input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+}
+
+.forgot-password {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-button {
+    background-color: #ff6a1a;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 0;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #e65c00;
+}
+
+.right-panel {
+    flex: 1;
+    background-image: url('imgs/login_bg.jpg');
+    background-size:cover;
+    background-position: center;
+    position:sticky;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 30px;
+    animation: slideInRight 0.8s ease forwards;
+}
+
+.overlay-text {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 30px 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 300px;
+}
+
+.overlay-text h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.overlay-text p {
+    font-size: 14px;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.register-button {
+    background-color: rgba(255, 255, 255, 0.209);
+    border: 1.5px solid white;
+    border-radius: 20px;
+    padding: 10px 30px;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: white;
+    color: #121212;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

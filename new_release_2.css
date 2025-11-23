@@ -1,0 +1,186 @@
+/* === Navbar === */
+.navbar {
+  background-color: #7a4a1e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.navbar-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.search-bar input {
+  width: 300px;
+  padding: 7px 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.icons span {
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.navbar-bottom {
+  background-color: #8b4d1e;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.navbar-bottom a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+}
+
+.navbar-bottom a.active {
+  text-decoration: underline;
+}
+/* Title Bar */
+.title-bar {
+  background-color: #ffffff;
+  color: #676565;
+  text-align: left;
+  margin-left: 50px;
+  margin-top: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+/* === Categories === */
+.categories {
+  padding: 30px 50px;
+}
+
+.categories h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 60px;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+/* === Books === */
+.books {
+  padding: 40px;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+
+.book {
+  text-align: center;
+  background-color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.book img {
+  width: 150px;
+  height: 220px;
+  object-fit: cover;
+}
+
+.book h4 {
+  font-size: 15px;
+  margin: 10px 0 5px;
+}
+
+.book p {
+  font-size: 13px;
+  color: #7a4a1e;
+}
+
+.book:hover {
+  transform: scale(1.05);
+}
+
+.footer-box {
+  background-color: #a45b28;
+  color: #fff;
+  padding: 23px 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  color :#000
+}
+
+.footer-content h4 {
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.copy {
+  text-align: center;
+  font-size: 13px;
+  border-top: 1px solid rgba(8, 8, 8, 0.3);
+  padding-top: 10px;
+  color: #000;
+}
+ 
+/* Pagination */
+.pagination {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.pagination span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.pages {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.pages a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 6px;
+  border: 2px solid #7a4a1e;
+  color: #7a4a1e;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.pages a:hover,
+.pages a.active {
+  background-color: #7a4a1e;
+  color: #fff;
+  transform: scale(1.05);
+}
